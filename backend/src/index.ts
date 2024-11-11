@@ -10,7 +10,7 @@ const app: Application = express();
 
 app.use(express.json());
 
-app.use('/getAllUsers', UserRoutes);
+app.use('/users', UserRoutes);
 
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en: http://localhost:${PORT}`);

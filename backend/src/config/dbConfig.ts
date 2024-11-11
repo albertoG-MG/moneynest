@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize';
 import path from 'path';
 import dotenv from 'dotenv';
 
-dotenv.config({ path: path.resolve(__dirname, '../../.env') });
+dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
 
 interface EnvConfig {
     DB_HOST: string;
@@ -17,7 +17,7 @@ class DbConfig {
     constructor() {
         const env: EnvConfig = process.env as unknown as EnvConfig;
 
-        if (!env.DB_HOST || !env.DB_NAME || !env.DB_USER || !env.DB_PASSWORD) {
+        if (!env.DB_HOST || !env.DB_NAME || !env.DB_USER) {
             throw new Error('Faltan variables de entorno. Asegúrate de definir DB_HOST, DB_NAME, DB_USER y DB_PASSWORD en tu archivo .env');
         }
 

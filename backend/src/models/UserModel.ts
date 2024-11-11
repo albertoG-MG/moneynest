@@ -15,7 +15,7 @@ interface UserAttributes{
     roles_id?: number,
     subrol_id?: number,
     nombre_foto?: string,
-    foto?: string
+    foto_identificador?: string
 }
 
 class UserModel extends Model<UserAttributes> implements UserAttributes {
@@ -29,14 +29,12 @@ class UserModel extends Model<UserAttributes> implements UserAttributes {
     public roles_id?: number;
     public subrol_id?: number;
     public nombre_foto?: string;
-    public foto?: string;
+    public foto_identificador?: string;
 
-    public static async getAllUsers() {
+    public static async getAllUsers(): Promise<UserAttributes[]> {
         const users = await UserModel.findAll();
-        return users.map(user => user.toJSON());
+        return users.map(user => user.toJSON() as UserAttributes);
     }
-
-
 }
 
 UserModel.init(
@@ -75,13 +73,14 @@ UserModel.init(
         nombre_foto: {
             type: DataTypes.STRING
         },
-        foto: {
+        foto_identificador: {
             type: DataTypes.STRING
         }
     },
     {
         sequelize,
-        tableName: 'Usuarios'
+        tableName: 'Usuarios',
+        timestamps: false
     }
 );
 
