@@ -50,7 +50,9 @@ const Navbar: React.FC = () => {
                                     </svg>
                                 </button>
                             </div>
-
+                            <div id="pluma_coins" className="text-green-500">
+                                <p>0 PC</p>
+                            </div>
                             <div className="relative" ref={menuOpcionesRef}>
                                 <div className="block text-center cursor-pointer" onClick={() => setOpciones(!opciones)} onKeyDown={manejarKeyDown} aria-haspopup="true" aria-expanded={opciones} aria-label="Opciones de perfil" tabIndex={0}>
                                     <img src="https://static01.nyt.com/images/2019/11/08/world/08quebec/08quebec-superJumbo.jpg" className="object-cover h-9 w-9 rounded-full mr-2 bg-gray-300" alt="Foto de perfil" />
