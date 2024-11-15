@@ -13,9 +13,11 @@ const App: React.FC = () => {
     <Router>
       <>
         <NavbarMenu />
-        <Routes>
-          <Route path="/" element={<div>Página de Dashboard</div>} />
-        </Routes>
+        <div className="container relative top-[100px] md:top-[140px] mx-auto px-4 lg:px-10">
+          <Routes>
+            <Route path="/" element={<div>Página de Dashboard</div>} />
+          </Routes>
+        </div>
       </>
     </Router>
   );
