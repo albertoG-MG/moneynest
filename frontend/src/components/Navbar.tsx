@@ -31,11 +31,11 @@ const Navbar: React.FC = () => {
             <div className="border border-b border-slate-100">
                 <div className="container mx-auto px-4 lg:px-8 py-2">
                     <div className="flex items-center justify-between">
-                        <div className="flex gap-5">
+                        <div className="flex-1 flex items-center gap-5">
                             <div className="shrink-0">
-                                <img src="/images/mark.svg" className="w-10 h-10" alt="Logo" />
+                                <img src="/images/moneynest.png" className="w-[5rem] h-[5rem]" alt="Logo" />
                             </div>
-                            <div className="hidden md:block">
+                            <div className="w-full hidden md:block pr-2.5">
                                 <input className="h-10 p-4 rounded-md border border-slate-100 outline-none focus:ring-2 focus:ring-green-500" placeholder="Búscar..." />
                             </div>
                         </div>
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
                                     </svg>
                                 </button>
                             </div>
-                            <div id="pluma_coins" className="text-green-500">
+                            <div id="huevo_coins" className="text-green-500">
                                 <p>0 PC</p>
                             </div>
                             <div className="relative" ref={menuOpcionesRef}>
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="border-b border-slate-100">
+            <div className="hidden md:block border-b border-slate-100">
                 <div className="container mx-auto px-4 lg:px-8">
                     <ul className="flex items-center text-gray-400 justify-between">
                         <li className="cursor-pointer px-2 py-2 hover:shadow-[0px_2px_0px_0px_rgba(34,197,94,1)]">Inicio</li>
