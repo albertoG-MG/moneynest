@@ -34,7 +34,7 @@ const Home: React.FC = () => {
               <h1 className="font-inter text-2x1 md:text-3xl font-bold text-black">Juega juegos y gana!</h1>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 py-4">
+          <div className="flex flex-col md:flex-row gap-3 py-4">
           {data.map((item, index) => (
             <Card
               key={item.id}
