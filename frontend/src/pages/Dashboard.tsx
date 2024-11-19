@@ -23,6 +23,20 @@ const data = [
     game: 'Install && Build Defense Towers',
     earn: 'Gana hasta 582 HC',
   },
+  {
+    id: 4,
+    imageGame: 'https://i.imgur.com/wnUiqBW.jpeg',
+    imageText: 'Blackjack 21: Blackjackist',
+    game: 'Blackjack 21: Blackjackist',
+    earn: 'Gana hasta 2,887 HC',
+  },
+  {
+    id: 5,
+    imageGame: 'https://i.imgur.com/j9DcYLU.jpeg',
+    imageText: 'Grand Cash Slots',
+    game: 'Grand Cash Slots',
+    earn: 'Gana hasta 2,921 HC',
+  },
 ];
 
 const Home: React.FC = () => {
@@ -43,7 +57,7 @@ const Home: React.FC = () => {
               <h1 className="font-inter text-2x1 md:text-3xl font-bold text-black">Juega juegos y gana!</h1>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-3 py-4">
+          <div className="flex flex-col md:flex-row gap-3 py-4 overflow-x-auto">
           {data.map((item, index) => (
             <Card
               key={item.id}
