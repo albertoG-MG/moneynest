@@ -14,7 +14,7 @@ const App: React.FC = () => {
     <Router>
       <>
         <NavbarMenu />
-        <div className="container relative top-[100px] md:top-[140px] mx-auto px-4 lg:px-10">
+        <div className="container relative top-[100px] md:top-[140px] mx-auto lg:px-10">
           <Routes>
             <Route path="/" element={<Dashboard />} />
           </Routes>
