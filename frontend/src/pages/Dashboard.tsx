@@ -49,6 +49,9 @@ const Home: React.FC = () => {
               <h1 className="font-inter text-2x1 md:text-3xl font-bold text-black">Encuestas</h1>
             </div>
           </div>
+          <div className="flex flex-col md:flex-row gap-3 py-4 overflow-x-auto overflow-y-hidden">
+          
+          </div>
         </div>
         <div className="mt-5">
           <div className="flex items-center justify-between gap-3">
@@ -57,7 +60,7 @@ const Home: React.FC = () => {
               <h1 className="font-inter text-2x1 md:text-3xl font-bold text-black">Juega juegos y gana!</h1>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-3 py-4 overflow-x-auto">
+          <div className="flex flex-col md:flex-row gap-3 py-4 overflow-x-auto overflow-y-hidden">
           {data.map((item, index) => (
             <Card
               key={item.id}

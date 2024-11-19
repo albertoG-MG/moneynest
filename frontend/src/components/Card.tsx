@@ -11,7 +11,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({key, imageGame, imageText, game, earn }) => {
   return (
     <div className="relative w-full h-[81px] md:w-[200px] md:h-[300px] cursor-pointer flex flex-row md:flex-col gap-4 rounded-lg shadow-lg flex-shrink-0">
-      <div className="absolute w-[24%] md:w-full md:flex-1 md:absolute md:top-0 md:left-0">
+      <div className="absolute w-[82px] md:w-full md:flex-1 md:absolute md:top-0 md:left-0">
         <img
           src={imageGame}
           className="h-full object-cover rounded-l-lg md:rounded-bl-none md:rounded-t-lg"
