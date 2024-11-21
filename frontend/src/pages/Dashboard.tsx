@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
+import RatingBar from '../components/RatingBar';
 
 const data = [
   {
@@ -94,98 +95,62 @@ const Home: React.FC = () => {
                 <h1 className="font-inter text-2x1 md:text-3xl font-bold text-black">Encuestas</h1>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 py-4 overflow-y-hidden px-4">
-              <div className="cursor-pointer w-full rounded-md shadow-md flex">
-                <div className="w-[100px] bg-green-500 rounded-l-md text-white">
-                  <div className="flex flex-col items-center p-4 gap-3">
-                      <p className="font-semibold">75 HC</p>
-                      <p>id survey: 12345678</p>
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 py-4 overflow-y-hidden px-4">
+              <div className="cursor-pointer w-full rounded-3xl shadow-md flex">
+                <div className="w-[150px] flex items-center justify-center rounded-l-3xl bg-green-500 p-2">
+                  <p className="font-bold text-2xl text-white line-clamp-1"> 80 hc </p>
                 </div>
-                <div className="flex-1 flex flex-col p-4 gap-3">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 6V12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.24 16.24L12 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <p>75 minutos</p>
+                <div className="w-full flex flex-col items-center text-center p-4 gap-3">
+                  <div className="w-full flex flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0e1f29" version="1.1" className="w-6 h-6"  viewBox="0 0 612 612" xmlSpace="preserve">
+                      <g>
+                        <g>
+                          <path d="M468.562,229.5v-153h42.232L540.281,0H71.719l29.486,76.5h42.233v153c0,5.828,2.654,11.279,7.172,14.941L271.422,306 l-120.812,61.559c-4.518,3.624-7.172,9.113-7.172,14.941v153h-42.233L71.719,612h468.562l-29.486-76.5h-42.232v-153 c0-5.828-2.615-11.317-7.172-14.941L346.641,306l114.75-61.559C465.947,240.779,468.562,235.328,468.562,229.5z M430.312,391.689 v61.73h-9.409l-114.506-58.168L191.159,453.42h-9.472v-61.73l127.21-68.037L430.312,391.689z M430.312,220.311l-121.415,68.037 l-127.21-68.037V76.5h248.625V220.311z"/>
+                          <polygon points="306.397,223.126 382.896,176.906 382.896,130.686 229.5,130.686 229.5,176.906 229.897,176.906"/>
+                        </g>
+                      </g>
+                    </svg>
+                    <p className="flex-1 text-2xl font-semibold text-[#0e1f29]">25 minutos</p>
                   </div>
-                  <div className="flex">
-                    <svg className="w-6 h-6 text-yellow-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-yellow-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-yellow-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-gray-300 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-gray-300 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                  </div>
+                  <RatingBar rating={1.5} />
                 </div>
               </div>
-              <div className="cursor-pointer w-full rounded-md shadow-md flex">
-                <div className="w-[100px] bg-green-500 rounded-l-md text-white">
-                  <div className="flex flex-col items-center p-4 gap-3">
-                      <p className="font-semibold">25 HC</p>
-                      <p>id survey: 9432193</p>
-                  </div>
+              <div className="cursor-pointer w-full rounded-3xl shadow-md flex">
+                <div className="w-[150px] flex items-center justify-center rounded-l-3xl bg-green-500 p-2">
+                  <p className="font-bold text-2xl text-white line-clamp-1"> 31 hc </p>
                 </div>
-                <div className="flex-1 flex flex-col p-4 gap-3">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 6V12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.24 16.24L12 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <p>50 minutos</p>
+                <div className="w-full flex flex-col items-center text-center p-4 gap-3">
+                  <div className="w-full flex flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0e1f29" version="1.1" className="w-6 h-6"  viewBox="0 0 612 612" xmlSpace="preserve">
+                      <g>
+                        <g>
+                          <path d="M468.562,229.5v-153h42.232L540.281,0H71.719l29.486,76.5h42.233v153c0,5.828,2.654,11.279,7.172,14.941L271.422,306 l-120.812,61.559c-4.518,3.624-7.172,9.113-7.172,14.941v153h-42.233L71.719,612h468.562l-29.486-76.5h-42.232v-153 c0-5.828-2.615-11.317-7.172-14.941L346.641,306l114.75-61.559C465.947,240.779,468.562,235.328,468.562,229.5z M430.312,391.689 v61.73h-9.409l-114.506-58.168L191.159,453.42h-9.472v-61.73l127.21-68.037L430.312,391.689z M430.312,220.311l-121.415,68.037 l-127.21-68.037V76.5h248.625V220.311z"/>
+                          <polygon points="306.397,223.126 382.896,176.906 382.896,130.686 229.5,130.686 229.5,176.906 229.897,176.906"/>
+                        </g>
+                      </g>
+                    </svg>
+                    <p className="flex-1 text-2xl font-semibold text-[#0e1f29]">12 minutos</p>
                   </div>
-                  <div className="flex">
-                    <svg className="w-6 h-6 text-yellow-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-yellow-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-yellow-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-gray-300 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-gray-300 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                  </div>
+                  <RatingBar rating={3.5} />
                 </div>
               </div>
-              <div className="cursor-pointer w-full rounded-md shadow-md flex">
-                <div className="w-[100px] bg-green-500 rounded-l-md text-white">
-                  <div className="flex flex-col items-center p-4 gap-3">
-                      <p className="font-semibold">10 HC</p>
-                      <p>id survey: 3456321</p>
-                  </div>
+              <div className="cursor-pointer w-full rounded-3xl shadow-md flex">
+                <div className="w-[150px] flex items-center justify-center rounded-l-3xl bg-green-500 p-2">
+                  <p className="font-bold text-2xl text-white line-clamp-1"> 100 hc </p>
                 </div>
-                <div className="flex-1 flex flex-col p-4 gap-3">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 6V12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.24 16.24L12 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <p>5 minutos</p>
+                <div className="w-full flex flex-col items-center text-center p-4 gap-3">
+                  <div className="w-full flex flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0e1f29" version="1.1" className="w-6 h-6"  viewBox="0 0 612 612" xmlSpace="preserve">
+                      <g>
+                        <g>
+                          <path d="M468.562,229.5v-153h42.232L540.281,0H71.719l29.486,76.5h42.233v153c0,5.828,2.654,11.279,7.172,14.941L271.422,306 l-120.812,61.559c-4.518,3.624-7.172,9.113-7.172,14.941v153h-42.233L71.719,612h468.562l-29.486-76.5h-42.232v-153 c0-5.828-2.615-11.317-7.172-14.941L346.641,306l114.75-61.559C465.947,240.779,468.562,235.328,468.562,229.5z M430.312,391.689 v61.73h-9.409l-114.506-58.168L191.159,453.42h-9.472v-61.73l127.21-68.037L430.312,391.689z M430.312,220.311l-121.415,68.037 l-127.21-68.037V76.5h248.625V220.311z"/>
+                          <polygon points="306.397,223.126 382.896,176.906 382.896,130.686 229.5,130.686 229.5,176.906 229.897,176.906"/>
+                        </g>
+                      </g>
+                    </svg>
+                    <p className="flex-1 text-2xl font-semibold text-[#0e1f29]">30 minutos</p>
                   </div>
-                  <div className="flex">
-                    <svg className="w-6 h-6 text-yellow-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-yellow-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-yellow-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-gray-300 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                    <svg className="w-6 h-6 text-gray-300 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
-                    </svg>
-                  </div>
+                  <RatingBar rating={4} />
                 </div>
               </div>
             </div>
