@@ -1,26 +1,37 @@
 import React from "react";
+import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 
-// Definimos la interfaz para las props
 interface RatingBarProps {
-  rating: number; // El rating debe ser un número entre 0 y 5
+  rating: number;
 }
 
 const RatingBar: React.FC<RatingBarProps> = ({ rating }) => {
-  
-  const getColor = (rating: number): string => {
-    if (rating <= 1) return "bg-red-600";
-    if (rating <= 2) return "bg-red-400";
-    if (rating <= 3) return "bg-yellow-400";
-    if (rating <= 4) return "bg-green-300";
-    return "bg-green-600";
+
+  // Función para generar las estrellas
+  const renderStars = (rating: number) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 !== 0;
+    const emptyStars = 5 - Math.ceil(rating);
+
+    for (let i = 1; i <= fullStars; i++) {
+      stars.push(<FaStar key={`full-${i}`} className="text-yellow-500" />);
+    }
+
+    if (halfStar) {
+      stars.push(<FaStarHalfAlt key="half" className="text-yellow-500" />);
+    }
+
+    for (let i = 1; i <= emptyStars; i++) {
+      stars.push(<FaRegStar key={`empty-${i}`} className="text-yellow-300" />);
+    }
+
+    return stars;
   };
 
   return (
-    <div className="w-full h-6 bg-gray-200 rounded-full overflow-hidden">
-      <div
-        className={`h-full ${getColor(rating)} rounded-full`}
-        style={{ width: `${(rating / 5) * 100}%` }}
-      ></div>
+    <div className="flex items-center">
+      {renderStars(rating)}
     </div>
   );
 };

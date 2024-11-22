@@ -98,58 +98,28 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 py-4 overflow-y-hidden px-4">
               <div className="cursor-pointer w-full rounded-3xl shadow-md flex">
                 <div className="w-[150px] flex items-center justify-center rounded-l-3xl bg-green-500 p-2">
-                  <p className="font-bold text-2xl text-white line-clamp-1"> 80 hc </p>
+                  <p className="font-bold text-xl text-white line-clamp-1"> 80 hc </p>
                 </div>
-                <div className="w-full flex flex-col items-center text-center p-4 gap-3">
-                  <div className="w-full flex flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0e1f29" version="1.1" className="w-6 h-6"  viewBox="0 0 612 612" xmlSpace="preserve">
-                      <g>
-                        <g>
-                          <path d="M468.562,229.5v-153h42.232L540.281,0H71.719l29.486,76.5h42.233v153c0,5.828,2.654,11.279,7.172,14.941L271.422,306 l-120.812,61.559c-4.518,3.624-7.172,9.113-7.172,14.941v153h-42.233L71.719,612h468.562l-29.486-76.5h-42.232v-153 c0-5.828-2.615-11.317-7.172-14.941L346.641,306l114.75-61.559C465.947,240.779,468.562,235.328,468.562,229.5z M430.312,391.689 v61.73h-9.409l-114.506-58.168L191.159,453.42h-9.472v-61.73l127.21-68.037L430.312,391.689z M430.312,220.311l-121.415,68.037 l-127.21-68.037V76.5h248.625V220.311z"/>
-                          <polygon points="306.397,223.126 382.896,176.906 382.896,130.686 229.5,130.686 229.5,176.906 229.897,176.906"/>
-                        </g>
-                      </g>
-                    </svg>
-                    <p className="flex-1 text-2xl font-semibold text-[#0e1f29]">25 minutos</p>
-                  </div>
+                <div className="w-full flex flex-col p-4 gap-3">
+                  <p className="text-xl font-semibold text-[#0e1f29]">25 minutos</p>
                   <RatingBar rating={1.5} />
                 </div>
               </div>
               <div className="cursor-pointer w-full rounded-3xl shadow-md flex">
                 <div className="w-[150px] flex items-center justify-center rounded-l-3xl bg-green-500 p-2">
-                  <p className="font-bold text-2xl text-white line-clamp-1"> 31 hc </p>
+                  <p className="font-bold text-xl text-white line-clamp-1"> 31 hc </p>
                 </div>
-                <div className="w-full flex flex-col items-center text-center p-4 gap-3">
-                  <div className="w-full flex flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0e1f29" version="1.1" className="w-6 h-6"  viewBox="0 0 612 612" xmlSpace="preserve">
-                      <g>
-                        <g>
-                          <path d="M468.562,229.5v-153h42.232L540.281,0H71.719l29.486,76.5h42.233v153c0,5.828,2.654,11.279,7.172,14.941L271.422,306 l-120.812,61.559c-4.518,3.624-7.172,9.113-7.172,14.941v153h-42.233L71.719,612h468.562l-29.486-76.5h-42.232v-153 c0-5.828-2.615-11.317-7.172-14.941L346.641,306l114.75-61.559C465.947,240.779,468.562,235.328,468.562,229.5z M430.312,391.689 v61.73h-9.409l-114.506-58.168L191.159,453.42h-9.472v-61.73l127.21-68.037L430.312,391.689z M430.312,220.311l-121.415,68.037 l-127.21-68.037V76.5h248.625V220.311z"/>
-                          <polygon points="306.397,223.126 382.896,176.906 382.896,130.686 229.5,130.686 229.5,176.906 229.897,176.906"/>
-                        </g>
-                      </g>
-                    </svg>
-                    <p className="flex-1 text-2xl font-semibold text-[#0e1f29]">12 minutos</p>
-                  </div>
+                <div className="w-full flex flex-col p-4 gap-3">
+                  <p className="text-xl font-semibold text-[#0e1f29]">12 minutos</p>
                   <RatingBar rating={3.5} />
                 </div>
               </div>
               <div className="cursor-pointer w-full rounded-3xl shadow-md flex">
                 <div className="w-[150px] flex items-center justify-center rounded-l-3xl bg-green-500 p-2">
-                  <p className="font-bold text-2xl text-white line-clamp-1"> 100 hc </p>
+                  <p className="font-bold text-xl text-white line-clamp-1"> 100 hc </p>
                 </div>
-                <div className="w-full flex flex-col items-center text-center p-4 gap-3">
-                  <div className="w-full flex flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0e1f29" version="1.1" className="w-6 h-6"  viewBox="0 0 612 612" xmlSpace="preserve">
-                      <g>
-                        <g>
-                          <path d="M468.562,229.5v-153h42.232L540.281,0H71.719l29.486,76.5h42.233v153c0,5.828,2.654,11.279,7.172,14.941L271.422,306 l-120.812,61.559c-4.518,3.624-7.172,9.113-7.172,14.941v153h-42.233L71.719,612h468.562l-29.486-76.5h-42.232v-153 c0-5.828-2.615-11.317-7.172-14.941L346.641,306l114.75-61.559C465.947,240.779,468.562,235.328,468.562,229.5z M430.312,391.689 v61.73h-9.409l-114.506-58.168L191.159,453.42h-9.472v-61.73l127.21-68.037L430.312,391.689z M430.312,220.311l-121.415,68.037 l-127.21-68.037V76.5h248.625V220.311z"/>
-                          <polygon points="306.397,223.126 382.896,176.906 382.896,130.686 229.5,130.686 229.5,176.906 229.897,176.906"/>
-                        </g>
-                      </g>
-                    </svg>
-                    <p className="flex-1 text-2xl font-semibold text-[#0e1f29]">30 minutos</p>
-                  </div>
+                <div className="w-full flex flex-col p-4 gap-3">
+                  <p className="text-xl font-semibold text-[#0e1f29]">30 minutos</p>
                   <RatingBar rating={4} />
                 </div>
               </div>
