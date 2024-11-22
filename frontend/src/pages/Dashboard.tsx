@@ -95,32 +95,77 @@ const Home: React.FC = () => {
                 <h1 className="font-inter text-2x1 md:text-3xl font-bold text-black">Encuestas</h1>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 py-4 overflow-y-hidden px-4">
-              <div className="cursor-pointer w-full rounded-3xl shadow-md flex">
-                <div className="w-[150px] flex items-center justify-center rounded-l-3xl bg-green-500 p-2">
-                  <p className="font-bold text-xl text-white line-clamp-1"> 80 hc </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 py-4 px-4">
+              <div className="relative cursor-pointer bg-[#1a1a1a] rounded-full shadow-md">
+                <div className="absolute top-1 left-1 flex items-center justify-center p-2">
+                  <div className="h-16 w-16 rounded-full bg-[#3ab69b] flex flex-col items-center justify-center">
+                    <p className="font-bold text-lg text-white">52</p>
+                    <span className="text-sm text-white">hc</span>
+                  </div>
                 </div>
-                <div className="w-full flex flex-col p-4 gap-3">
-                  <p className="text-xl font-semibold text-[#0e1f29]">25 minutos</p>
+                <div className="ml-20 w-full flex flex-col p-4 gap-3">
+                  <p className="text-xl font-semibold text-white">25 minutos</p>
+                  <RatingBar rating={3} />
+                </div>
+              </div>
+              <div className="relative cursor-pointer bg-[#1a1a1a] rounded-full shadow-md">
+                <div className="absolute top-1 left-1 flex items-center justify-center p-2">
+                  <div className="h-16 w-16 rounded-full bg-[#3ab69b] flex flex-col items-center justify-center">
+                    <p className="font-bold text-lg text-white">64</p>
+                    <span className="text-sm text-white">hc</span>
+                  </div>
+                </div>
+                <div className="ml-20 w-full flex flex-col p-4 gap-3">
+                  <p className="text-xl font-semibold text-white">10 minutos</p>
+                  <RatingBar rating={2} />
+                </div>
+              </div>
+              <div className="relative cursor-pointer bg-[#1a1a1a] rounded-full shadow-md">
+                <div className="absolute top-1 left-1 flex items-center justify-center p-2">
+                  <div className="h-16 w-16 rounded-full bg-[#3ab69b] flex flex-col items-center justify-center">
+                    <p className="font-bold text-lg text-white">81</p>
+                    <span className="text-sm text-white">hc</span>
+                  </div>
+                </div>
+                <div className="ml-20 w-full flex flex-col p-4 gap-3">
+                  <p className="text-xl font-semibold text-white">12 minutos</p>
+                  <RatingBar rating={4.5} />
+                </div>
+              </div>
+              <div className="relative cursor-pointer bg-[#1a1a1a] rounded-full shadow-md">
+                <div className="absolute top-1 left-1 flex items-center justify-center p-2">
+                  <div className="h-16 w-16 rounded-full bg-[#3ab69b] flex flex-col items-center justify-center">
+                    <p className="font-bold text-lg text-white">27</p>
+                    <span className="text-sm text-white">hc</span>
+                  </div>
+                </div>
+                <div className="ml-20 w-full flex flex-col p-4 gap-3">
+                  <p className="text-xl font-semibold text-white">8 minutos</p>
+                  <RatingBar rating={0.5} />
+                </div>
+              </div>
+              <div className="relative cursor-pointer bg-[#1a1a1a] rounded-full shadow-md">
+                <div className="absolute top-1 left-1 flex items-center justify-center p-2">
+                  <div className="h-16 w-16 rounded-full bg-[#3ab69b] flex flex-col items-center justify-center">
+                    <p className="font-bold text-lg text-white">6</p>
+                    <span className="text-sm text-white">hc</span>
+                  </div>
+                </div>
+                <div className="ml-20 w-full flex flex-col p-4 gap-3">
+                  <p className="text-xl font-semibold text-white">45 minutos</p>
+                  <RatingBar rating={2.5} />
+                </div>
+              </div>
+              <div className="relative cursor-pointer bg-[#1a1a1a] rounded-full shadow-md">
+                <div className="absolute top-1 left-1 flex items-center justify-center p-2">
+                  <div className="h-16 w-16 rounded-full bg-[#3ab69b] flex flex-col items-center justify-center">
+                    <p className="font-bold text-lg text-white">32</p>
+                    <span className="text-sm text-white">hc</span>
+                  </div>
+                </div>
+                <div className="ml-20 w-full flex flex-col p-4 gap-3">
+                  <p className="text-xl font-semibold text-white">35 minutos</p>
                   <RatingBar rating={1.5} />
-                </div>
-              </div>
-              <div className="cursor-pointer w-full rounded-3xl shadow-md flex">
-                <div className="w-[150px] flex items-center justify-center rounded-l-3xl bg-green-500 p-2">
-                  <p className="font-bold text-xl text-white line-clamp-1"> 31 hc </p>
-                </div>
-                <div className="w-full flex flex-col p-4 gap-3">
-                  <p className="text-xl font-semibold text-[#0e1f29]">12 minutos</p>
-                  <RatingBar rating={3.5} />
-                </div>
-              </div>
-              <div className="cursor-pointer w-full rounded-3xl shadow-md flex">
-                <div className="w-[150px] flex items-center justify-center rounded-l-3xl bg-green-500 p-2">
-                  <p className="font-bold text-xl text-white line-clamp-1"> 100 hc </p>
-                </div>
-                <div className="w-full flex flex-col p-4 gap-3">
-                  <p className="text-xl font-semibold text-[#0e1f29]">30 minutos</p>
-                  <RatingBar rating={4} />
                 </div>
               </div>
             </div>
